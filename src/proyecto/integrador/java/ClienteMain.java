@@ -9,9 +9,9 @@ import java.io.IOException;
 
 /**
  *
- * @author Tomas Langhi 
+ * @author nico
  */
-public class ProyectoIntegradorJava {
+public class ClienteMain {
 
     /**
      * @param args the command line arguments
@@ -19,8 +19,8 @@ public class ProyectoIntegradorJava {
      */
     public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        Servidor serv = new Servidor();
-        serv.startServer();
+        Cliente client = new Cliente();
+        client.startClient();
     }
     
 }
