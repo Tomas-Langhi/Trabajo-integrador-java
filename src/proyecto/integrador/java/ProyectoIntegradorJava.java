@@ -7,6 +7,7 @@ package proyecto.integrador.java;
 
 import java.io.IOException;
 import java.sql.SQLException;
+
 /**
  *
  * @author Tomas Langhi 
@@ -20,17 +21,10 @@ public class ProyectoIntegradorJava {
      */
     public static void main(String[] args) throws IOException, SQLException {
         // TODO code application logic here
-
-        Sqlite  miBaseDb=new Sqlite();
-        miBaseDb.conectar();
-        miBaseDb.crearTabla("alumno");
-        miBaseDb.insertaDatos(17, "Jose", "Ojeda","Bien");
-        miBaseDb.insertaDatos(18, "Juan", "Martin","Bien");
-        miBaseDb.consultaDatos("alumno");
-        miBaseDb.ActualizarDatos("alumno", 18, "Notable");
-        miBaseDb.consultaDatos("alumno");
-        miBaseDb.BorrarDatos("alumno", 17);
-        miBaseDb.consultaDatos("alumno");
+        
+        Alumno al = new Alumno("nicolas", "steffolani");
+        al.save();
+        
     }
 
 }
